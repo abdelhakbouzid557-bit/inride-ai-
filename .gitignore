@@ -8,3 +8,6 @@
 playwright-report/
 test-results/
 .playwright-mcp/
+
+.vercel
+.env*
