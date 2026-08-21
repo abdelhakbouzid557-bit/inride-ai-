@@ -55,11 +55,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/ICON.png", sizes: "192x192", type: "image/png" },
-      { url: "/ICON.png", sizes: "512x512", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/ICON.png?v=2", sizes: "192x192", type: "image/png" },
+      { url: "/ICON.png?v=2", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
     ],
-    apple: "/ICON.png",
+    apple: "/ICON.png?v=2",
   },
 };
 
@@ -99,6 +99,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
+        <link rel="icon" type="image/png" sizes="512x512" href="/ICON.png?v=2" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/ICON.png?v=2" />
+        <link rel="apple-touch-icon" href="/ICON.png?v=2" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
