@@ -54,8 +54,12 @@ export const metadata: Metadata = {
     images: [SITE.ogImage],
   },
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: [
+      { url: "/LOGO.png", sizes: "192x192", type: "image/png" },
+      { url: "/LOGO.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/LOGO.png",
   },
 };
 
