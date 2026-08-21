@@ -55,11 +55,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/logoicon.png", sizes: "192x192", type: "image/png" },
-      { url: "/logoicon.png", sizes: "512x512", type: "image/png" },
+      { url: "/ICON.png", sizes: "192x192", type: "image/png" },
+      { url: "/ICON.png", sizes: "512x512", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: "/logoicon.png",
+    apple: "/ICON.png",
   },
 };
 
