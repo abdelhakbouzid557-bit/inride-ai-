@@ -55,10 +55,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/LOGOWEB.png?v=4", sizes: "192x192", type: "image/png" },
-      { url: "/LOGOWEB.png?v=4", sizes: "512x512", type: "image/png" },
+      { url: "/LOGO.png?v=5", sizes: "192x192", type: "image/png" },
+      { url: "/LOGO.png?v=5", sizes: "512x512", type: "image/png" },
     ],
-    apple: "/LOGOWEB.png?v=4",
+    apple: "/LOGO.png?v=5",
   },
 };
 
@@ -98,9 +98,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/png" sizes="512x512" href="/LOGOWEB.png?v=4" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/LOGOWEB.png?v=4" />
-        <link rel="apple-touch-icon" href="/LOGOWEB.png?v=4" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/LOGO.png?v=5" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/LOGO.png?v=5" />
+        <link rel="apple-touch-icon" href="/LOGO.png?v=5" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
