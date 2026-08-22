@@ -259,6 +259,8 @@ export interface Dict {
     qrTitle: string;
     qrSub: string;
     qrAria: string;
+    safetyTitle: string;
+    safetySub: string;
   };
   finalCta: {
     title: string;
@@ -636,6 +638,8 @@ const ar: Dict = {
     qrTitle: "امسح الرمز",
     qrSub: "لتحميل التطبيق على هاتفك",
     qrAria: "رمز QR لتحميل تطبيق INRIDE AI",
+    safetyTitle: "تنقل بذكاء وأمان",
+    safetySub: "رحلاتك، شروطك، اختيارك.",
   },
   finalCta: {
     title: "نقلك بحرّيتك.. وسعرك باختيارك",
@@ -1015,6 +1019,8 @@ const fr: Dict = {
     qrTitle: "Scannez le code",
     qrSub: "pour télécharger l'application sur votre téléphone",
     qrAria: "Code QR pour télécharger l'application INRIDE AI",
+    safetyTitle: "Circulez malin et en sécurité",
+    safetySub: "Vos trajets, vos conditions, votre choix.",
   },
   finalCta: {
     title: "Voyagez librement.. au prix que vous choisissez",
@@ -1394,6 +1400,8 @@ const en: Dict = {
     qrTitle: "Scan the code",
     qrSub: "to download the app on your phone",
     qrAria: "QR code to download the INRIDE AI app",
+    safetyTitle: "Ride smart and safe",
+    safetySub: "Your rides, your terms, your choice.",
   },
   finalCta: {
     title: "Move freely.. pay your price",
