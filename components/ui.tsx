@@ -6,7 +6,7 @@ export function Brand({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <img
-        src="/LOGO.png"
+        src="/LOGO5.png"
         alt="INRIDE AI"
         className="h-9 w-auto"
         width={36}
