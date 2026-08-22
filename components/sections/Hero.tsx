@@ -57,7 +57,7 @@ export default function Hero() {
             {t("hero.subtitle")}
           </p>
 
-          <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:gap-4" id="download">
+          <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:gap-4">
             <a
               href="https://inride.ai.dz/"
               target="_blank"
