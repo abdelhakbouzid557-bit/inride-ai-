@@ -77,9 +77,9 @@ export default function DownloadCTA() {
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 rounded-[2rem] border border-[#E5E7EB] bg-white p-8 shadow-xl md:flex-row md:p-12">
             <div className="relative flex-shrink-0">
               <div className="absolute -inset-6 rounded-[50%] bg-[#4346EE]/8 blur-3xl" aria-hidden="true" />
-              <div className="relative overflow-hidden rounded-[40px] border-[6px] border-[#0B1020] bg-[#0B1020] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3),0_8px_20px_-8px_rgba(67,70,238,0.15)]">
-                <div className="absolute left-1/2 top-3 z-30 h-4 w-24 -translate-x-1/2 rounded-full bg-black" aria-hidden="true" />
-                <div className="flex h-[380px] w-[200px] flex-col items-center justify-center bg-gradient-to-b from-[#4346EE]/8 via-indigo-50 to-slate-100 pt-8">
+              <div className="relative overflow-hidden rounded-[40px] border-[6px] border-[#E5E7EB] bg-white shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1),0_8px_20px_-8px_rgba(67,70,238,0.12)]">
+                <div className="absolute left-1/2 top-3 z-30 h-4 w-24 -translate-x-1/2 rounded-full bg-[#E5E7EB]" aria-hidden="true" />
+                <div className="flex h-[380px] w-[200px] flex-col items-center justify-center bg-gradient-to-b from-[#F7F8FC] via-white to-[#F7F8FC] pt-8">
                   <img
                     src="/LOGO5.png"
                     alt="INRIDE AI"
@@ -87,8 +87,8 @@ export default function DownloadCTA() {
                     width={80}
                     height={80}
                   />
-                  <span className="mt-3 text-2xl font-black tracking-tight text-[#111827]">INRIDE</span>
-                  <span className="text-xs font-bold text-[#4346EE]">AI</span>
+                  <span className="mt-3 text-2xl font-black tracking-tight text-[#4346EE]">INRIDE</span>
+                  <span className="text-xs font-bold text-[#111827]">AI</span>
                   <div className="mt-4 flex gap-2">
                     <span className="h-1.5 w-8 rounded-full bg-[#4346EE]/20" />
                     <span className="h-1.5 w-3 rounded-full bg-[#4346EE]/40" />
@@ -123,14 +123,14 @@ export default function DownloadCTA() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex w-72 items-center gap-3.5 rounded-2xl bg-[#0B1020] px-5 py-3.5 text-white shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl hover:bg-[#1a1f36]"
+                    className="group flex w-72 items-center gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white px-5 py-3.5 text-[#111827] shadow-md transition-all hover:-translate-y-0.5 hover:shadow-xl hover:border-[#4346EE]"
                   >
-                    <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-white/10 text-white transition group-hover:bg-white/15">
+                    <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-[#4346EE]/10 text-[#4346EE] transition group-hover:bg-[#4346EE]/15">
                       <s.icon />
                     </span>
                     <span className="flex flex-col items-start leading-tight">
-                      <small className="text-[0.62rem] font-semibold uppercase tracking-wider text-white/50">{s.top}</small>
-                      <strong className="text-[0.95rem] font-bold">{s.name}</strong>
+                      <small className="text-[0.62rem] font-semibold uppercase tracking-wider text-[#9CA3AF]">{s.top}</small>
+                      <strong className="text-[0.95rem] font-bold text-[#111827]">{s.name}</strong>
                     </span>
                   </a>
                 ))}
