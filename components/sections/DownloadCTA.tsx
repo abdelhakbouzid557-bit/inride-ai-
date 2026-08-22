@@ -99,7 +99,7 @@ export default function DownloadCTA() {
                     <div className="h-2 w-3/4 rounded-full bg-[#E5E7EB]" />
                     <div className="h-2 w-5/6 rounded-full bg-[#E5E7EB]" />
                   </div>
-                  <div className="mt-auto mb-4 flex w-[calc(100%-24px)] gap-2 rounded-2xl bg-white p-3 shadow-md">
+                  <div className="mt-auto mb-4 flex w-[calc(100%-24px)] gap-2 rounded-2xl bg-white p-3 shadow-md border border-[#E5E7EB]">
                     <div className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-[#4346EE]/10 text-[#4346EE]">
                       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                         <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" />
