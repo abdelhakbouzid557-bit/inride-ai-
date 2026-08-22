@@ -81,7 +81,7 @@ export default function DownloadCTA() {
                 <div className="absolute left-1/2 top-3 z-30 h-4 w-24 -translate-x-1/2 rounded-full bg-black" aria-hidden="true" />
                 <div className="flex h-[380px] w-[200px] flex-col items-center justify-center bg-gradient-to-b from-[#4346EE]/8 via-indigo-50 to-slate-100 pt-8">
                   <img
-                    src="/LOGO.png"
+                    src="/LOGO5.png"
                     alt="INRIDE AI"
                     className="h-20 w-20 object-contain"
                     width={80}

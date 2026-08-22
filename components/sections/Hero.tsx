@@ -123,7 +123,7 @@ export default function Hero() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 sm:gap-3">
                       <span className="grid h-8 w-8 flex-none place-items-center rounded-full bg-[#4346EE] shadow-sm overflow-hidden sm:h-9 sm:w-9">
-                        <img src="/LOGO.png" alt="INRIDE AI" className="h-full w-full object-cover" width={36} height={36} />
+                        <img src="/LOGO5.png" alt="INRIDE AI" className="h-full w-full object-cover" width={36} height={36} />
                       </span>
                       <div>
                         <h3 className="text-[0.65rem] font-bold text-[#111827] sm:text-xs">{t("hero.phoneTitle")}</h3>

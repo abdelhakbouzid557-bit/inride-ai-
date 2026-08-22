@@ -63,7 +63,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2.5">
           <div
-            className="hidden items-center gap-0.5 rounded-full border border-border bg-bg-soft p-1 sm:flex"
+            className="flex items-center gap-0.5 rounded-full border border-border bg-bg-soft p-1"
             role="group"
             aria-label={t("aria.lang")}
           >
