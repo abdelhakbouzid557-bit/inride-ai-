@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
   --color-primary: #4346EE;
@@ -33,6 +34,27 @@
   --shadow-lg: 0 24px 50px -20px rgba(21, 23, 30, 0.16);
   --shadow-brand: 0 20px 40px -10px rgba(67, 70, 238, 0.22);
   --shadow-glow: 0 16px 40px -12px rgba(67, 70, 238, 0.32);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
 }
 
 @layer base {
