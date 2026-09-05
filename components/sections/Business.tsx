@@ -33,7 +33,7 @@ export default function Business() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((b, i) => (
             <Reveal key={b.text} delay={(i % 4) * 80}>
-              <div className="flex h-full items-start gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm transition hover:border-[#4346EE]/30 hover:shadow-md">
+              <div className="flex h-full items-start gap-3.5 rounded-2xl border border-[#E8EAF0] bg-white p-5 shadow-sm transition hover:border-[#4346EE]/30 hover:shadow-md">
                 <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-[#4346EE]/10 text-[#4346EE]">
                   <b.icon className="h-5 w-5" aria-hidden="true" />
                 </span>

@@ -28,15 +28,15 @@ export default function News() {
   ];
 
   return (
-    <section id="news" className="bg-[#F7F8FC] py-20 md:py-28">
+    <section id="news" className="bg-[#F8F9FC] py-20 md:py-28">
       <div className="container-page">
         <SectionHeading eyebrow={t("news.kicker")} title={t("news.title")} subtitle={t("news.subtitle")} />
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {posts.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
-              <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg">
-                <div className="h-1.5 bg-gradient-to-r from-[#4346EE] to-[#6366F1]" />
+              <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-[#E8EAF0] bg-white shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg">
+                <div className="h-1.5 bg-gradient-to-r from-[#4346EE] to-[#5A5CED]" />
                 <div className="flex flex-1 flex-col p-7">
                   <div className="flex items-center gap-3">
                     <span className="rounded-full bg-[#4346EE]/10 px-3 py-1 text-[0.7rem] font-bold text-[#4346EE]">
@@ -47,8 +47,8 @@ export default function News() {
                       {p.date}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-lg font-extrabold leading-snug text-[#111827]">{p.title}</h3>
-                  <p className="mt-2 flex-1 text-[0.92rem] text-[#6B7280]">{p.desc}</p>
+                  <h3 className="mt-4 text-lg font-extrabold leading-snug text-[#15171E]">{p.title}</h3>
+                  <p className="mt-2 flex-1 text-[0.92rem] text-[#626775]">{p.desc}</p>
                   <a
                     href="#news"
                     className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold text-[#4346EE]"

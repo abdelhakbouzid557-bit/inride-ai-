@@ -55,25 +55,25 @@ function PhoneScene() {
   return (
     <div className="relative w-full overflow-hidden" style={{ height: 140 }}>
       <svg viewBox="0 0 220 140" className="h-full w-full" preserveAspectRatio="xMidYMax slice">
-        <rect width="220" height="140" fill="#F7F8FC" />
-        <rect y="108" width="220" height="32" fill="#E5E7EB" />
+        <rect width="220" height="140" fill="#F8F9FC" />
+        <rect y="108" width="220" height="32" fill="#E8EAF0" />
         <rect x="0" y="106" width="220" height="4" fill="#D1D5DB" />
         {[30, 70, 110, 150].map((x) => (
           <line key={x} x1={x} y1={120} x2={x + 20} y2={120} stroke="white" strokeWidth="2" strokeDasharray="6 4" opacity={0.7} />
         ))}
-        <rect x="45" y="68" width="14" height="38" rx="2" fill="#E5E7EB" />
+        <rect x="45" y="68" width="14" height="38" rx="2" fill="#E8EAF0" />
         <rect x="47" y="72" width="10" height="7" rx="1" fill="#CBD5E1" />
         <rect x="47" y="82" width="10" height="7" rx="1" fill="#CBD5E1" />
         <rect x="47" y="92" width="10" height="7" rx="1" fill="#CBD5E1" />
-        <rect x="76" y="52" width="18" height="54" rx="3" fill="#E5E7EB" />
+        <rect x="76" y="52" width="18" height="54" rx="3" fill="#E8EAF0" />
         <rect x="79" y="57" width="12" height="10" rx="1.5" fill="#CBD5E1" />
         <rect x="79" y="70" width="12" height="10" rx="1.5" fill="#CBD5E1" />
         <rect x="79" y="83" width="12" height="10" rx="1.5" fill="#CBD5E1" />
         <rect x="82" y="47" width="6" height="5" rx="1" fill="#D1D5DB" />
-        <rect x="138" y="62" width="16" height="44" rx="2" fill="#E5E7EB" />
+        <rect x="138" y="62" width="16" height="44" rx="2" fill="#E8EAF0" />
         <rect x="140" y="67" width="12" height="8" rx="1" fill="#CBD5E1" />
         <rect x="140" y="78" width="12" height="8" rx="1" fill="#CBD5E1" />
-        <rect x="162" y="48" width="20" height="58" rx="3" fill="#E5E7EB" />
+        <rect x="162" y="48" width="20" height="58" rx="3" fill="#E8EAF0" />
         <rect x="165" y="53" width="14" height="12" rx="1.5" fill="#CBD5E1" />
         <rect x="165" y="68" width="14" height="12" rx="1.5" fill="#CBD5E1" />
         <rect x="165" y="83" width="14" height="12" rx="1.5" fill="#CBD5E1" />
@@ -81,8 +81,8 @@ function PhoneScene() {
         <g transform="translate(115, 82)">
           <rect x="-18" y="-4" width="36" height="14" rx="4" fill="#4346EE" />
           <rect x="-14" y="-7" width="28" height="6" rx="3" fill="#3639D6" />
-          <rect x="-20" y="8" width="5" height="4" rx="2" fill="#111827" opacity={0.6} />
-          <rect x="15" y="8" width="5" height="4" rx="2" fill="#111827" opacity={0.6} />
+          <rect x="-20" y="8" width="5" height="4" rx="2" fill="#15171E" opacity={0.6} />
+          <rect x="15" y="8" width="5" height="4" rx="2" fill="#15171E" opacity={0.6} />
           <circle cx="-10" cy="10" r="2" fill="#374151" />
           <circle cx="10" cy="10" r="2" fill="#374151" />
           <rect x="16" y="1" width="6" height="4" rx="1" fill="#4346EE" opacity={0.8} />
@@ -129,17 +129,17 @@ export default function DownloadCTA() {
   ];
 
   return (
-    <section id="download" className="relative overflow-hidden bg-[#F7F8FC] py-20 md:py-28">
+    <section id="download" className="relative overflow-hidden bg-[#F8F9FC] py-20 md:py-28">
       <GeometricBg />
 
       <div className="container-page relative z-10">
         <Reveal>
           <header className="mx-auto mb-16 max-w-2xl text-center">
             <span className="eyebrow">{t("download.kicker")}</span>
-            <h2 className="mb-4 text-3xl font-extrabold leading-tight text-[#111827] md:text-5xl">
+            <h2 className="mb-4 text-3xl font-extrabold leading-tight text-[#15171E] md:text-5xl">
               {t("download.title")}
             </h2>
-            <p className="text-base text-[#6B7280] md:text-lg">{t("download.subtitle")}</p>
+            <p className="text-base text-[#626775] md:text-lg">{t("download.subtitle")}</p>
           </header>
         </Reveal>
 
@@ -149,13 +149,13 @@ export default function DownloadCTA() {
               <div className="absolute -inset-12 rounded-full bg-[#4346EE]/[0.06] blur-3xl" aria-hidden="true" />
 
               <div className="relative w-[260px] sm:w-[280px] md:w-[300px]">
-                <div className="overflow-hidden rounded-[36px] border-[5px] border-[#E5E7EB] bg-white shadow-[0_30px_70px_-20px_rgba(17,24,39,0.12),0_8px_24px_-8px_rgba(67,70,238,0.08)] sm:rounded-[40px] sm:border-[6px]">
-                  <div className="absolute left-1/2 top-2.5 z-30 h-3.5 w-20 -translate-x-1/2 rounded-full bg-[#E5E7EB] sm:top-3 sm:h-4 sm:w-24" aria-hidden="true" />
+                <div className="overflow-hidden rounded-[36px] border-[5px] border-[#E8EAF0] bg-white shadow-[0_30px_70px_-20px_rgba(17,24,39,0.12),0_8px_24px_-8px_rgba(67,70,238,0.08)] sm:rounded-[40px] sm:border-[6px]">
+                  <div className="absolute left-1/2 top-2.5 z-30 h-3.5 w-20 -translate-x-1/2 rounded-full bg-[#E8EAF0] sm:top-3 sm:h-4 sm:w-24" aria-hidden="true" />
 
-                  <div className="flex min-h-[420px] flex-col items-center justify-center bg-gradient-to-b from-white via-[#F7F8FC] to-[#EEF0FF] pt-8 sm:min-h-[480px]">
+                  <div className="flex min-h-[420px] flex-col items-center justify-center bg-gradient-to-b from-white via-[#F8F9FC] to-[#F1F1FE] pt-8 sm:min-h-[480px]">
                     <img src="/LOGO5.png" alt="INRIDE AI" className="h-16 w-16 object-contain sm:h-20 sm:w-20" width={80} height={80} />
                     <span className="mt-4 text-2xl font-black tracking-tight text-[#4346EE] sm:text-3xl">INRIDE</span>
-                    <span className="text-sm font-bold text-[#111827] sm:text-base">AI</span>
+                    <span className="text-sm font-bold text-[#15171E] sm:text-base">AI</span>
 
                     <div className="mt-5 flex items-center gap-1.5">
                       <span className="h-2 w-2 animate-bounce rounded-full bg-[#4346EE]" style={{ animationDelay: "0ms" }} />
@@ -167,14 +167,14 @@ export default function DownloadCTA() {
                   </div>
                 </div>
 
-                <div className="absolute -bottom-5 left-1/2 z-30 w-[calc(100%-32px)] -translate-x-1/2 rounded-2xl border border-[#E5E7EB] bg-white px-4 py-3 shadow-lg sm:-bottom-6 sm:px-5 sm:py-3.5">
+                <div className="absolute -bottom-5 left-1/2 z-30 w-[calc(100%-32px)] -translate-x-1/2 rounded-2xl border border-[#E8EAF0] bg-white px-4 py-3 shadow-lg sm:-bottom-6 sm:px-5 sm:py-3.5">
                   <div className="flex items-center gap-3">
                     <div className="grid h-9 w-9 flex-none place-items-center rounded-xl bg-[#4346EE]/10">
                       <Shield className="h-[18px] w-[18px] text-[#4346EE]" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="text-[0.7rem] font-bold text-[#111827] sm:text-xs">{t("download.safetyTitle")}</p>
-                      <p className="text-[0.6rem] text-[#6B7280] sm:text-[0.68rem]">{t("download.safetySub")}</p>
+                      <p className="text-[0.7rem] font-bold text-[#15171E] sm:text-xs">{t("download.safetyTitle")}</p>
+                      <p className="text-[0.6rem] text-[#626775] sm:text-[0.68rem]">{t("download.safetySub")}</p>
                     </div>
                   </div>
                 </div>
@@ -188,14 +188,14 @@ export default function DownloadCTA() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-3 rounded-2xl border border-[#E5E7EB] bg-white px-4 py-3.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#4346EE]/40 hover:shadow-md sm:flex-col sm:items-center sm:gap-2 sm:px-5 sm:py-5"
+                  className="group flex items-center gap-3 rounded-2xl border border-[#E8EAF0] bg-white px-4 py-3.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#4346EE]/40 hover:shadow-md sm:flex-col sm:items-center sm:gap-2 sm:px-5 sm:py-5"
                 >
                   <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-[#4346EE]/10 text-[#4346EE] transition group-hover:bg-[#4346EE]/15">
                     <StoreIcon type={s.type} />
                   </span>
                   <span className="flex flex-col items-start leading-tight sm:items-center">
                     <small className="text-[0.6rem] font-semibold uppercase tracking-wider text-[#9CA3AF] sm:text-[0.58rem]">{s.top}</small>
-                    <strong className="text-[0.85rem] font-bold text-[#111827] sm:text-sm">{s.name}</strong>
+                    <strong className="text-[0.85rem] font-bold text-[#15171E] sm:text-sm">{s.name}</strong>
                   </span>
                 </a>
               ))}
@@ -205,10 +205,10 @@ export default function DownloadCTA() {
               <div
                 role="img"
                 aria-label={t("download.qrAria")}
-                className="group relative grid h-32 w-32 place-items-center rounded-2xl border border-[#E5E7EB] bg-white p-3 shadow-sm transition hover:shadow-md sm:h-36 sm:w-36"
+                className="group relative grid h-32 w-32 place-items-center rounded-2xl border border-[#E8EAF0] bg-white p-3 shadow-sm transition hover:shadow-md sm:h-36 sm:w-36"
               >
                 <span className="absolute inset-0 rounded-2xl bg-[#4346EE]/5 opacity-0 transition group-hover:opacity-100" />
-                <span className="relative h-full w-full text-[#111827]">
+                <span className="relative h-full w-full text-[#15171E]">
                   <FakeQr />
                 </span>
               </div>

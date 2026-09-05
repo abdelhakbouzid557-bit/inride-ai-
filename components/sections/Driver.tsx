@@ -47,21 +47,21 @@ export default function Driver() {
   }, [steps.length]);
 
   return (
-    <section id="drivers" className="bg-[#F7F8FC] py-20 md:py-28">
+    <section id="drivers" className="bg-[#F8F9FC] py-20 md:py-28">
       <div className="container-page grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-[#4346EE]/15 bg-[#4346EE]/5 px-4 py-2 text-xs font-bold text-[#4346EE]">
             {t("driver.kicker")}
           </span>
-          <h2 className="mb-4 mt-4 text-3xl font-extrabold leading-tight text-[#111827] md:text-5xl">
+          <h2 className="mb-4 mt-4 text-3xl font-extrabold leading-tight text-[#15171E] md:text-5xl">
             {t("driver.title")}
           </h2>
-          <p className="mb-8 max-w-xl text-lg text-[#6B7280]">{t("driver.subtitle")}</p>
+          <p className="mb-8 max-w-xl text-lg text-[#626775]">{t("driver.subtitle")}</p>
 
           <ul className="grid gap-3">
             {benefits.map((b, i) => (
               <Reveal key={b.text} delay={i * 60}>
-                <li className="flex items-start gap-3.5 rounded-2xl border border-[#E5E7EB] bg-white p-4 shadow-sm transition hover:border-[#4346EE]/30 hover:shadow-md">
+                <li className="flex items-start gap-3.5 rounded-2xl border border-[#E8EAF0] bg-white p-4 shadow-sm transition hover:border-[#4346EE]/30 hover:shadow-md">
                   <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-[#4346EE]/10 text-[#4346EE]">
                     <b.icon className="h-5 w-5" aria-hidden="true" />
                   </span>
@@ -90,7 +90,7 @@ export default function Driver() {
 
             <div className="relative rounded-3xl border-8 border-[#0B1020] bg-[#0B1020] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
               <div className="absolute left-1/2 top-3 z-30 h-4 w-28 -translate-x-1/2 rounded-full bg-black" aria-hidden="true" />
-              <div className="flex h-[420px] flex-col justify-between bg-gradient-to-b from-[#4346EE]/5 via-indigo-50 to-slate-100 p-4 pt-12">
+              <div className="flex h-[420px] flex-col justify-between bg-gradient-to-b from-[#4346EE]/6 via-[#F1F1FE] to-white p-4 pt-12">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between rounded-2xl bg-white/90 p-3 shadow-sm backdrop-blur">
                     <div className="flex items-center gap-2.5">
@@ -98,20 +98,20 @@ export default function Driver() {
                         <Car className="h-5 w-5" />
                       </span>
                       <div>
-                        <p className="text-xs font-bold text-[#111827]">Yacine B.</p>
+                        <p className="text-xs font-bold text-[#15171E]">Yacine B.</p>
                         <div className="flex items-center gap-1">
                           <Star className="h-3 w-3 fill-[#F59E0B] text-[#F59E0B]" />
-                          <span className="text-[10px] font-bold text-[#6B7280]">4.9</span>
+                          <span className="text-[10px] font-bold text-[#626775]">4.9</span>
                         </div>
                       </div>
                     </div>
-                    <span className="text-sm font-black text-[#111827]">2,450 DZD</span>
+                    <span className="text-sm font-black text-[#15171E]">2,450 DZD</span>
                   </div>
 
                   <div className="flex items-center gap-2 rounded-xl bg-white/80 p-2.5 text-[10px] font-bold text-[#374151] shadow-sm">
                     <Navigation className="h-4 w-4 text-[#4346EE]" />
                     <span className="flex-1 truncate">Centre-ville → Bab Ezzouar</span>
-                    <span className="text-[#6B7280]">8.2 km</span>
+                    <span className="text-[#626775]">8.2 km</span>
                   </div>
 
                   <div className="flex items-center gap-2 rounded-xl bg-white/80 p-2.5 text-[10px] font-bold text-[#374151] shadow-sm">

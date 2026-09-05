@@ -27,11 +27,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b bg-white/75 backdrop-blur-xl transition-all ${
+      className={`sticky top-0 z-50 border-b bg-white/80 backdrop-blur-xl transition-all duration-300 ${
         scrolled ? "border-border shadow-md shadow-slate-900/5" : "border-transparent"
       }`}
     >
-      <div className="container-page flex h-[72px] items-center justify-between gap-4">
+      <div className="container-page flex h-[68px] items-center justify-between gap-4">
         <a href="#top" aria-label="INRIDE AI" className="shrink-0">
           <Brand />
         </a>

@@ -66,7 +66,7 @@ export default function Safety() {
           <div className="mt-10 text-center">
             <a
               href="#download"
-              className="inline-flex items-center gap-2 rounded-full bg-[#111827] px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1a1f36]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#15171E] px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1a1f36]"
             >
               <AlertTriangle className="h-4 w-4" aria-hidden="true" />
               {t("safety.cta")}

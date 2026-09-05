@@ -63,7 +63,7 @@ export default function Services() {
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 100}>
               <article
-                className={`group flex h-full flex-col rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg ${
+                className={`group flex h-full flex-col rounded-3xl border border-[#E8EAF0] bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg ${
                   s.featured ? "md:col-span-2 xl:col-span-2 border-[#4346EE]/20" : ""
                 }`}
               >
@@ -72,21 +72,21 @@ export default function Services() {
                     <s.icon className="h-6 w-6" aria-hidden="true" />
                   </span>
                   <div>
-                    <h3 className="text-lg font-extrabold leading-tight text-[#111827]">{s.title}</h3>
+                    <h3 className="text-lg font-extrabold leading-tight text-[#15171E]">{s.title}</h3>
                     <span className="mt-1 inline-block rounded-full bg-[#4346EE]/10 px-2.5 py-0.5 text-[0.7rem] font-bold text-[#4346EE]">
                       {s.tag}
                     </span>
                   </div>
                 </div>
-                <p className="mt-4 text-[0.95rem] text-[#6B7280]">{s.desc}</p>
+                <p className="mt-4 text-[0.95rem] text-[#626775]">{s.desc}</p>
 
-                <div className="mt-5 border-t border-dashed border-[#E5E7EB] pt-4">
+                <div className="mt-5 border-t border-dashed border-[#E8EAF0] pt-4">
                   <span className="block text-[0.7rem] font-extrabold uppercase tracking-wide text-[#4346EE]">
                     {t("services.riderTitle")}
                   </span>
                   <p className="mt-1 text-[0.88rem] text-[#374151]">{s.rider}</p>
                 </div>
-                <div className="mt-3 border-t border-dashed border-[#E5E7EB] pt-4">
+                <div className="mt-3 border-t border-dashed border-[#E8EAF0] pt-4">
                   <span className="block text-[0.7rem] font-extrabold uppercase tracking-wide text-[#4346EE]">
                     {t("services.driverTitle")}
                   </span>

@@ -22,13 +22,13 @@ export default function TrustBar() {
   ];
 
   return (
-    <section className="border-y border-[#E5E7EB] bg-[#F7F8FC] py-12 md:py-16">
+    <section className="border-y border-[#E8EAF0] bg-[#F8F9FC] py-12 md:py-16">
       <div className="container-page">
         <Reveal>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
-                <strong className="block text-3xl font-black text-[#111827] md:text-4xl">
+                <strong className="block text-3xl font-black text-[#15171E] md:text-4xl">
                   <Counter
                     value={s.value}
                     decimals={s.decimals}
@@ -36,7 +36,7 @@ export default function TrustBar() {
                     suffix={s.suffix}
                   />
                 </strong>
-                <span className="mt-1 block text-sm font-semibold text-[#6B7280]">
+                <span className="mt-1 block text-sm font-semibold text-[#626775]">
                   {s.label}
                 </span>
               </div>

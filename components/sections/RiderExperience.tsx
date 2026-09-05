@@ -37,8 +37,8 @@ export default function RiderExperience() {
                   {i < steps.length - 1 && (
                     <div className="absolute left-[calc(50%+32px)] top-7 hidden h-0.5 w-[calc(100%-64px)] bg-gradient-to-r from-[#4346EE]/30 to-[#4346EE]/10 md:block" />
                   )}
-                  <h3 className="mt-4 text-sm font-extrabold text-[#111827]">{s.title}</h3>
-                  <p className="mt-1.5 max-w-[140px] text-[0.8rem] text-[#6B7280]">{s.desc}</p>
+                  <h3 className="mt-4 text-sm font-extrabold text-[#15171E]">{s.title}</h3>
+                  <p className="mt-1.5 max-w-[140px] text-[0.8rem] text-[#626775]">{s.desc}</p>
                 </li>
               </Reveal>
             ))}

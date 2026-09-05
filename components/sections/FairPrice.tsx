@@ -13,7 +13,7 @@ export default function FairPrice() {
   ];
 
   return (
-    <section id="pricing" className="bg-[#F7F8FC] py-20 md:py-28">
+    <section id="pricing" className="bg-[#F8F9FC] py-20 md:py-28">
       <div className="container-page">
         <SectionHeading eyebrow={t("fair.kicker")} title={t("fair.title")} subtitle={t("fair.subtitle")} />
 
@@ -21,15 +21,15 @@ export default function FairPrice() {
           {steps.map((s, i) => (
             <Reveal key={s.title} delay={i * 120}>
               <div className="flex flex-1 items-center">
-                <article className="group flex-1 rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg">
+                <article className="group flex-1 rounded-3xl border border-[#E8EAF0] bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg">
                   <span className="grid h-14 w-14 place-items-center rounded-2xl bg-[#4346EE]/10 text-[#4346EE] transition group-hover:scale-110 group-hover:-rotate-3">
                     <s.icon className="h-7 w-7" aria-hidden="true" />
                   </span>
                   <span className="mt-5 block text-xs font-extrabold uppercase tracking-widest text-[#9CA3AF]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-1 text-xl font-extrabold text-[#111827]">{s.title}</h3>
-                  <p className="mt-2 text-[0.95rem] text-[#6B7280]">{s.desc}</p>
+                  <h3 className="mt-1 text-xl font-extrabold text-[#15171E]">{s.title}</h3>
+                  <p className="mt-2 text-[0.95rem] text-[#626775]">{s.desc}</p>
                 </article>
                 {i < steps.length - 1 && (
                   <div className="hidden md:flex md:px-3">
@@ -37,7 +37,7 @@ export default function FairPrice() {
                   </div>
                 )}
                 {i < steps.length - 1 && (
-                  <div className="block border-b-2 border-dashed border-[#E5E7EB] md:hidden" />
+                  <div className="block border-b-2 border-dashed border-[#E8EAF0] md:hidden" />
                 )}
               </div>
             </Reveal>

@@ -16,14 +16,14 @@ export default function AIFeatures() {
   ];
 
   return (
-    <section id="ai" className="bg-[#F7F8FC] py-20 md:py-28">
+    <section id="ai" className="bg-[#F8F9FC] py-20 md:py-28">
       <div className="container-page">
         <SectionHeading eyebrow={t("ai.kicker")} title={t("ai.title")} subtitle={t("ai.subtitle")} />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <Reveal key={f.title} delay={(i % 3) * 100}>
-              <article className="group h-full rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg">
+              <article className="group h-full rounded-3xl border border-[#E8EAF0] bg-white p-7 shadow-sm transition hover:-translate-y-1.5 hover:border-[#4346EE]/30 hover:shadow-lg">
                 <div className="relative">
                   <span className="grid h-14 w-14 place-items-center rounded-2xl bg-[#4346EE]/10 text-[#4346EE] transition group-hover:scale-110 group-hover:-rotate-3">
                     <f.icon className="h-7 w-7" aria-hidden="true" />
@@ -35,8 +35,8 @@ export default function AIFeatures() {
                     </span>
                   )}
                 </div>
-                <h3 className="mt-5 text-xl font-extrabold text-[#111827]">{f.title}</h3>
-                <p className="mt-2 text-[0.95rem] text-[#6B7280]">{f.desc}</p>
+                <h3 className="mt-5 text-xl font-extrabold text-[#15171E]">{f.title}</h3>
+                <p className="mt-2 text-[0.95rem] text-[#626775]">{f.desc}</p>
               </article>
             </Reveal>
           ))}
