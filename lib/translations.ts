@@ -2,6 +2,22 @@ export type Lang = "ar" | "fr" | "en";
 
 export interface Dict {
   meta: { title: string; description: string };
+  landing: {
+    heroEyebrow: string; heroTitle: string; heroAccent: string; heroBody: string;
+    heroPrimary: string; heroSecondary: string; heroImageAlt: string;
+    servicesEyebrow: string; servicesTitle: string; servicesBody: string;
+    serviceCars: string; serviceCarsBody: string; serviceMoto: string; serviceMotoBody: string;
+    servicePassenger: string; servicePassengerBody: string; serviceMoving: string; serviceMovingBody: string;
+    serviceCargo: string; serviceCargoBody: string; serviceTruck: string; serviceTruckBody: string;
+    processEyebrow: string; processTitle: string; processBody: string;
+    process1: string; process1Body: string; process2: string; process2Body: string; process3: string; process3Body: string;
+    riderEyebrow: string; riderTitle: string; riderBody: string; riderBenefit1: string; riderBenefit2: string; riderBenefit3: string;
+    driverEyebrow: string; driverTitle: string; driverBody: string; driverBenefit1: string; driverBenefit2: string; driverBenefit3: string;
+    safetyEyebrow: string; safetyTitle: string; safetyBody: string; safetyPoint1: string; safetyPoint2: string; safetyPoint3: string;
+    appEyebrow: string; appTitle: string; appBody: string; appCta: string; appImageAlt: string;
+    photoCredit: string; faqEyebrow: string; faqTitle: string; faq1: string; faq1Body: string; faq2: string; faq2Body: string;
+    faq3: string; faq3Body: string; faq4: string; faq4Body: string;
+  };
   common: {
     menu: string;
     close: string;
@@ -25,6 +41,9 @@ export interface Dict {
     support: string;
     cta: string;
     login: string;
+    pricing: string;
+    app: string;
+    faq: string;
   };
   hero: {
     badge: string;
@@ -246,6 +265,10 @@ export interface Dict {
     totalWilayas: string;
     cities: { name: string; status: "live" | "soon" }[];
   };
+  contact: {
+    title: string;
+    description: string;
+  };
   download: {
     kicker: string;
     title: string;
@@ -309,9 +332,43 @@ export interface Dict {
 
 const ar: Dict = {
   meta: {
-    title: "INRIDE AI — تنقّل بذكاء. تحرّك بحرية.",
+    title: "INRIDE AI — تنقّل ذكي بخيارات واضحة",
     description:
-      "INRIDE AI منصة تنقل ذكية في الجزائر: أسعار عادلة بالتفاوض المباشر، تنقّل حضري، سفر بين الولايات، توصيل إكسبرس، سلامة عبر GPS حيّ وتوثيق هوية. حمّل التطبيق الآن.",
+      "اكتشف خدمات التنقّل ونقل الركاب والأغراض مع INRIDE AI. اقترح السعر وتفاهم مع السائق قبل الرحلة.",
+  },
+  landing: {
+    heroEyebrow: "تنقّل ذكي، بخيارات واضحة",
+    heroTitle: "رحلتك،",
+    heroAccent: "على طريقتك.",
+    heroBody: "من مشوار المدينة إلى نقل الأغراض، تجمع INRIDE AI خيارات التنقّل في منصة واحدة. اقترح السعر وتفاهم مباشرةً مع السائق.",
+    heroPrimary: "استكشف الخدمات",
+    heroSecondary: "كيف تعمل المنصة",
+    heroImageAlt: "سيارة أجرة تسير في شارع حضري",
+    servicesEyebrow: "حلول التنقّل والنقل",
+    servicesTitle: "خدمة تناسب مشوارك",
+    servicesBody: "تنقّل يومي أو نقل أغراض وشحنات؛ اختر الفئة المناسبة لاحتياجك.",
+    serviceCars: "السيارات", serviceCarsBody: "للمشاوير اليومية والتنقّل داخل المدينة.",
+    serviceMoto: "الدراجات النارية", serviceMotoBody: "خيار عملي للمشاوير الخفيفة والتنقّل السريع.",
+    servicePassenger: "نقل الركاب", servicePassengerBody: "رحلات داخل المدينة وبين الوجهات.",
+    serviceMoving: "نقل الأثاث", serviceMovingBody: "لنقل الأغراض المنزلية والأثاث.",
+    serviceCargo: "الشحن والبضائع", serviceCargoBody: "لنقل الطرود والبضائع حسب احتياجك.",
+    serviceTruck: "الشاحنات الكبيرة", serviceTruckBody: "حلول لنقل الحمولات الكبيرة.",
+    processEyebrow: "طريقة الاستخدام", processTitle: "اتفاق واضح، من البداية", processBody: "ثلاث خطوات بسيطة للاتفاق على الرحلة والسعر.",
+    process1: "اختر الخدمة", process1Body: "حدّد نوع التنقّل والوجهة التي تناسبك.",
+    process2: "اقترح السعر", process2Body: "قدّم السعر المناسب لك وناقشه مع السائق.",
+    process3: "اتفق وانطلق", process3Body: "يقبل السائق السعر أو يقترح مقابلاً، ثم تنطلقان بعد الاتفاق.",
+    riderEyebrow: "للركّاب", riderTitle: "تحكّم أكبر في تفاصيل مشوارك", riderBody: "اختر الخدمة المناسبة، وابدأ حوار السعر قبل تأكيد الرحلة.",
+    riderBenefit1: "اختر من خدمات تنقّل ونقل متعددة.", riderBenefit2: "اقترح السعر الذي تراه مناسبًا.", riderBenefit3: "ناقش العرض مع السائق قبل الاتفاق.",
+    driverEyebrow: "للسائقين", driverTitle: "مساحة أوضح لاتفاق يناسب الطرفين", driverBody: "استقبل طلبات النقل، وقرّر قبول السعر أو تقديم عرض مقابل.",
+    driverBenefit1: "راجع تفاصيل الطلب قبل الرد.", driverBenefit2: "اقبل السعر المقترح أو أرسل عرضك.", driverBenefit3: "اتفق مع الراكب على السعر قبل بدء الرحلة.",
+    safetyEyebrow: "الثقة تبدأ بالوضوح", safetyTitle: "تفاصيل واضحة قبل الاتفاق", safetyBody: "تعرّف على نوع الخدمة والسعر المقترح، وناقش التفاصيل مع الطرف الآخر قبل تأكيد مشوارك.",
+    safetyPoint1: "اتفاق السعر بين الراكب والسائق.", safetyPoint2: "وضوح نوع الخدمة المطلوبة.", safetyPoint3: "التواصل حول تفاصيل الرحلة قبل الانطلاق.",
+    appEyebrow: "INRIDE AI على هاتفك", appTitle: "تنقّل وخيارات أكثر، في منصة واحدة", appBody: "تعرّف على منصة INRIDE AI وخدمات التنقّل عبر الموقع الرسمي.", appCta: "زيارة الموقع الرسمي", appImageAlt: "سيارة تعبر شارعًا في المدينة",
+    photoCredit: "الصورة: Timo Wielink / Unsplash", faqEyebrow: "معلومات مفيدة", faqTitle: "أسئلة متكررة",
+    faq1: "كيف يتم تحديد سعر الرحلة؟", faq1Body: "يقترح الراكب السعر، ويمكن للسائق قبوله أو إرسال عرض مقابل حتى يتفق الطرفان.",
+    faq2: "ما خدمات النقل المتاحة؟", faq2Body: "تشمل الخيارات السيارات والدراجات النارية ونقل الركاب والأثاث والبضائع والشاحنات الكبيرة.",
+    faq3: "هل السعر ثابت قبل التفاوض؟", faq3Body: "السعر المقترح قابل للنقاش بين الراكب والسائق، ويُحسم بالاتفاق بينهما.",
+    faq4: "أين أجد معلومات التطبيق؟", faq4Body: "تجد معلومات INRIDE AI وخدماتها عبر الموقع الرسمي.",
   },
   common: {
     menu: "فتح القائمة",
@@ -340,8 +397,11 @@ const ar: Dict = {
     news: "الأخبار",
     about: "من نحن",
     support: "الدعم",
-    cta: "حمّل التطبيق",
+    cta: "استكشف المنصة",
     login: "تسجيل الدخول",
+    pricing: "طريقة العمل",
+    app: "التطبيق",
+    faq: "الأسئلة الشائعة",
   },
   hero: {
     badge: "حرية التفاوض والتنقّل بأسعار عادلة",
@@ -557,12 +617,12 @@ const ar: Dict = {
     i4D: "محرك محلي للتجارة الرقمية والخدمات الذكية.",
   },
   cities: {
-    kicker: "التغطية الجغرافية",
-    title: "متوفر في مدن متزايدة عبر الجزائر",
-    subtitle: "ننمو تدريجياً ولايةً بولاية — تحقق من حالة مدينتك.",
+    kicker: "قائمة المدن",
+    title: "ابحث في قائمة المدن",
+    subtitle: "اكتب اسم المدينة لتصفية القائمة.",
     available: "متوفر",
     soon: "قريباً",
-    search: "ابحث عن ولايتك",
+    search: "ابحث عن مدينة",
     totalWilayas: "58 ولاية",
     cities: [
       { name: "الجزائر العاصمة", status: "live" },
@@ -625,6 +685,10 @@ const ar: Dict = {
       { name: "المنيعة", status: "soon" },
     ],
   },
+  contact: {
+    title: "تواصل معنا",
+    description: "للاستفسارات والتواصل مع فريق INRIDE AI، راسلنا عبر بريدنا الإلكتروني.",
+  },
   download: {
     kicker: "حمّل التطبيق",
     title: "جاهز للانطلاق مع INRIDE AI؟",
@@ -644,7 +708,7 @@ const ar: Dict = {
   finalCta: {
     title: "نقلك بحرّيتك.. وسعرك باختيارك",
     subtitle: "انضم إلى آلاف الركاب والسائقين في الجزائر واختبر جيلاً جديداً من التنقل الذكي.",
-    cta: "حمّل التطبيق الآن",
+    cta: "استكشف المنصة",
     alt: "تواصل معنا",
     ctaDriver: "سجّل ك سائق",
   },
@@ -661,7 +725,7 @@ const ar: Dict = {
     trust4: "دفع آمن",
   },
   footer: {
-    tagline: "التنقل الذكي للجزائر، مدعوم بالذكاء الاصطناعي.",
+    tagline: "تنقّل ذكي مع وكيل.",
     aboutTitle: "عن INRIDE AI",
     aboutText:
       "INRIDE AI منصة رقمية تفاعلية تربط المستخدمين وتسهّل خدمات النقل والتنقل والتوصيل. نعمل كوسطاء تقنيين نوفّر بيئة تفاوض حرة وآمنة بين الركاب والسائقين، دون التدخل المباشر في الصفقات الفردية.",
@@ -690,9 +754,39 @@ const ar: Dict = {
 
 const fr: Dict = {
   meta: {
-    title: "INRIDE AI — Mobilité intelligente & prix justes | Algérie",
+    title: "INRIDE AI — Mobilité et transport | Algérie",
     description:
-      "INRIDE AI est une plateforme de mobilité intelligente pour l'Algérie : prix justes par négociation directe, courses en ville, voyages inter-wilayas, livraison express, sécurité GPS en direct et vérification d'identité. Téléchargez l'application.",
+      "Découvrez les services de mobilité et de transport INRIDE AI. Proposez un prix et échangez avec le chauffeur avant le trajet.",
+  },
+  landing: {
+    heroEyebrow: "Une mobilité claire et bien pensée",
+    heroTitle: "Vos trajets,",
+    heroAccent: "à votre façon.",
+    heroBody: "Du déplacement en ville au transport de biens, INRIDE AI rassemble plusieurs options de mobilité sur une seule plateforme. Proposez votre prix et échangez directement avec le chauffeur.",
+    heroPrimary: "Découvrir les services", heroSecondary: "Comment ça marche", heroImageAlt: "Un taxi dans une rue urbaine",
+    servicesEyebrow: "Mobilité et transport", servicesTitle: "Un service adapté à votre trajet", servicesBody: "Déplacement quotidien, transport d’objets ou marchandises : choisissez l’option qui vous convient.",
+    serviceCars: "Voitures", serviceCarsBody: "Pour les trajets du quotidien et les déplacements en ville.",
+    serviceMoto: "Motos", serviceMotoBody: "Une option pratique pour les trajets légers et les déplacements rapides.",
+    servicePassenger: "Transport de passagers", servicePassengerBody: "Des trajets en ville et entre différentes destinations.",
+    serviceMoving: "Déménagement", serviceMovingBody: "Pour transporter des meubles et des effets personnels.",
+    serviceCargo: "Colis et marchandises", serviceCargoBody: "Pour le transport de colis et de marchandises selon vos besoins.",
+    serviceTruck: "Poids lourds", serviceTruckBody: "Des solutions pour le transport de charges volumineuses.",
+    processEyebrow: "Mode d’emploi", processTitle: "Un accord clair dès le départ", processBody: "Trois étapes simples pour convenir du trajet et du prix.",
+    process1: "Choisissez un service", process1Body: "Définissez le type de transport et votre destination.",
+    process2: "Proposez un prix", process2Body: "Indiquez le prix qui vous convient et échangez avec le chauffeur.",
+    process3: "Mettez-vous d’accord", process3Body: "Le chauffeur accepte ou fait une contre-proposition. Le trajet commence après accord.",
+    riderEyebrow: "Pour les passagers", riderTitle: "Plus de maîtrise sur votre trajet", riderBody: "Choisissez le service adapté et échangez sur le prix avant de confirmer.",
+    riderBenefit1: "Choisissez parmi plusieurs services de mobilité et de transport.", riderBenefit2: "Proposez le prix qui vous semble juste.", riderBenefit3: "Discutez de l’offre avec le chauffeur avant de vous décider.",
+    driverEyebrow: "Pour les chauffeurs", driverTitle: "Un échange plus clair pour trouver un accord", driverBody: "Recevez des demandes et choisissez d’accepter le prix ou de faire une contre-proposition.",
+    driverBenefit1: "Consultez les détails de la demande avant de répondre.", driverBenefit2: "Acceptez le prix proposé ou faites une contre-offre.", driverBenefit3: "Convenez du prix avec le passager avant le trajet.",
+    safetyEyebrow: "La confiance passe par la clarté", safetyTitle: "Des informations claires avant de convenir", safetyBody: "Consultez le service et le prix proposé, puis échangez sur les détails avant de confirmer votre trajet.",
+    safetyPoint1: "Le prix est convenu entre passager et chauffeur.", safetyPoint2: "Le type de service demandé est précisé.", safetyPoint3: "Les détails du trajet sont discutés avant le départ.",
+    appEyebrow: "INRIDE AI sur votre téléphone", appTitle: "La mobilité et ses options, sur une seule plateforme", appBody: "Découvrez la plateforme INRIDE AI et ses services de mobilité sur le site officiel.", appCta: "Visiter le site officiel", appImageAlt: "Une voiture traverse une rue en ville",
+    photoCredit: "Photo : Timo Wielink / Unsplash", faqEyebrow: "À savoir", faqTitle: "Questions fréquentes",
+    faq1: "Comment le prix d’un trajet est-il fixé ?", faq1Body: "Le passager propose un prix. Le chauffeur peut l’accepter ou faire une contre-proposition jusqu’à un accord.",
+    faq2: "Quels services de transport sont proposés ?", faq2Body: "Voitures, motos, transport de passagers, déménagement, marchandises et poids lourds.",
+    faq3: "Le prix est-il fixe avant la négociation ?", faq3Body: "Le prix proposé peut être discuté entre le passager et le chauffeur. Il est fixé d’un commun accord.",
+    faq4: "Où trouver des informations sur l’application ?", faq4Body: "Retrouvez des informations sur INRIDE AI et ses services sur le site officiel.",
   },
   common: {
     menu: "Ouvrir le menu",
@@ -721,8 +815,11 @@ const fr: Dict = {
     news: "Actualités",
     about: "À propos",
     support: "Support",
-    cta: "Télécharger l'appli",
+    cta: "Découvrir la plateforme",
     login: "Connexion",
+    pricing: "Fonctionnement",
+    app: "Application",
+    faq: "FAQ",
   },
   hero: {
     badge: "Liberté de négociation et déplacements à prix juste",
@@ -938,12 +1035,12 @@ const fr: Dict = {
     i4D: "Un moteur local pour le commerce numérique et les services intelligents.",
   },
   cities: {
-    kicker: "Couverture géographique",
-    title: "Disponible dans de plus en plus de villes d'Algérie",
-    subtitle: "Nous grandissons wilaya par wilaya — vérifiez la disponibilité de votre ville.",
+    kicker: "Liste des villes",
+    title: "Rechercher une ville",
+    subtitle: "Saisissez le nom d’une ville pour filtrer la liste.",
     available: "Disponible",
     soon: "Bientôt",
-    search: "Recherchez votre wilaya",
+    search: "Rechercher une ville",
     totalWilayas: "58 wilayas",
     cities: [
       { name: "Alger", status: "live" },
@@ -1006,6 +1103,10 @@ const fr: Dict = {
       { name: "El Meniaa", status: "soon" },
     ],
   },
+  contact: {
+    title: "Contactez-nous",
+    description: "Pour toute question ou demande, contactez l’équipe INRIDE AI par e-mail.",
+  },
   download: {
     kicker: "Téléchargez l'application",
     title: "Prêt à démarrer avec INRIDE AI ?",
@@ -1025,7 +1126,7 @@ const fr: Dict = {
   finalCta: {
     title: "Voyagez librement.. au prix que vous choisissez",
     subtitle: "Rejoignez des milliers de passagers et chauffeurs en Algérie et découvrez une nouvelle génération de mobilité intelligente.",
-    cta: "Télécharger l'appli",
+    cta: "Découvrir la plateforme",
     alt: "Nous contacter",
     ctaDriver: "Devenir chauffeur",
   },
@@ -1042,7 +1143,7 @@ const fr: Dict = {
     trust4: "Paiement sécurisé",
   },
   footer: {
-    tagline: "La mobilité intelligente pour l'Algérie, propulsée par l'IA.",
+    tagline: "Une mobilité intelligente avec un agent.",
     aboutTitle: "À propos d'INRIDE AI",
     aboutText:
       "INRIDE AI est une plateforme numérique interactive qui connecte les utilisateurs et facilite les services de transport, de mobilité et de livraison. Nous agissons comme intermédiaires techniques offrant un environnement de négociation libre et sécurisé entre passagers et conducteurs, sans intervenir directement dans les transactions individuelles.",
@@ -1071,9 +1172,39 @@ const fr: Dict = {
 
 const en: Dict = {
   meta: {
-    title: "INRIDE AI — Smart Mobility & Fair Pricing | Algeria",
+    title: "INRIDE AI — Mobility and transport | Algeria",
     description:
-      "INRIDE AI is a smart mobility platform for Algeria: fair negotiated pricing, city rides, inter-wilaya travel and express delivery. Live GPS safety, identity verification and SOS support. Download the app.",
+      "Explore INRIDE AI mobility and transport services. Propose a price and discuss it with the driver before your trip.",
+  },
+  landing: {
+    heroEyebrow: "Mobility with clear choices",
+    heroTitle: "Your journey,",
+    heroAccent: "your way.",
+    heroBody: "From city rides to moving goods, INRIDE AI brings mobility options together on one platform. Propose a price and discuss it directly with the driver.",
+    heroPrimary: "Explore services", heroSecondary: "How it works", heroImageAlt: "A taxi on an urban street",
+    servicesEyebrow: "Mobility and transport", servicesTitle: "A service for the journey you need", servicesBody: "For everyday trips, moving items, or cargo, choose the option that fits your needs.",
+    serviceCars: "Cars", serviceCarsBody: "For everyday trips and getting around town.",
+    serviceMoto: "Motorcycles", serviceMotoBody: "A practical option for light trips and quick journeys.",
+    servicePassenger: "Passenger transport", servicePassengerBody: "Trips within the city and between destinations.",
+    serviceMoving: "Moving and furniture", serviceMovingBody: "For transporting furniture and household items.",
+    serviceCargo: "Cargo and goods", serviceCargoBody: "For parcels and goods transport based on your needs.",
+    serviceTruck: "Large trucks", serviceTruckBody: "Transport options for larger loads.",
+    processEyebrow: "How it works", processTitle: "A clear agreement from the start", processBody: "Three simple steps to agree on your trip and price.",
+    process1: "Choose a service", process1Body: "Select the transport type and destination you need.",
+    process2: "Propose a price", process2Body: "Share a price that works for you and discuss it with the driver.",
+    process3: "Agree and go", process3Body: "The driver accepts or makes a counteroffer. The trip starts once you agree.",
+    riderEyebrow: "For passengers", riderTitle: "More say in your journey", riderBody: "Choose the service that fits and discuss the price before confirming.",
+    riderBenefit1: "Choose from several mobility and transport services.", riderBenefit2: "Propose a price that feels right to you.", riderBenefit3: "Discuss the offer with the driver before agreeing.",
+    driverEyebrow: "For drivers", driverTitle: "A clearer way to reach an agreement", driverBody: "Receive transport requests and choose to accept the proposed price or make a counteroffer.",
+    driverBenefit1: "Review request details before responding.", driverBenefit2: "Accept the proposed price or make a counteroffer.", driverBenefit3: "Agree on the fare with the passenger before the trip.",
+    safetyEyebrow: "Trust starts with clarity", safetyTitle: "Clear details before you agree", safetyBody: "See the service and proposed price, then discuss trip details before confirming.",
+    safetyPoint1: "The passenger and driver agree on the price.", safetyPoint2: "The requested service is clearly identified.", safetyPoint3: "Trip details can be discussed before departure.",
+    appEyebrow: "INRIDE AI on your phone", appTitle: "Mobility options in one place", appBody: "Explore the INRIDE AI platform and mobility services on the official website.", appCta: "Visit the official website", appImageAlt: "A car crossing a city street",
+    photoCredit: "Photo: Timo Wielink / Unsplash", faqEyebrow: "Good to know", faqTitle: "Frequently asked questions",
+    faq1: "How is the trip price set?", faq1Body: "The passenger proposes a price. The driver can accept or make a counteroffer until both agree.",
+    faq2: "What transport services are available?", faq2Body: "Cars, motorcycles, passenger transport, moving, cargo, and large trucks.",
+    faq3: "Is the price fixed before negotiation?", faq3Body: "The proposed price can be discussed by the passenger and driver, then set by mutual agreement.",
+    faq4: "Where can I learn about the app?", faq4Body: "Find information about INRIDE AI and its services on the official website.",
   },
   common: {
     menu: "Open menu",
@@ -1102,8 +1233,11 @@ const en: Dict = {
     news: "News",
     about: "About",
     support: "Support",
-    cta: "Download the app",
+    cta: "Explore the platform",
     login: "Sign in",
+    pricing: "How it works",
+    app: "The app",
+    faq: "FAQ",
   },
   hero: {
     badge: "Free negotiation and fair-priced rides",
@@ -1319,12 +1453,12 @@ const en: Dict = {
     i4D: "A local driver for digital commerce and smart services.",
   },
   cities: {
-    kicker: "Coverage",
-    title: "Available in more and more cities across Algeria",
-    subtitle: "Growing wilaya by wilaya — check the availability of your city.",
+    kicker: "City list",
+    title: "Search for a city",
+    subtitle: "Enter a city name to filter the list.",
     available: "Available",
     soon: "Coming soon",
-    search: "Search your wilaya",
+    search: "Search for a city",
     totalWilayas: "58 wilayas",
     cities: [
       { name: "Algiers", status: "live" },
@@ -1387,6 +1521,10 @@ const en: Dict = {
       { name: "El Meniaa", status: "soon" },
     ],
   },
+  contact: {
+    title: "Contact Us",
+    description: "For questions or inquiries, contact the INRIDE AI team by email.",
+  },
   download: {
     kicker: "Download the app",
     title: "Ready to get moving with INRIDE AI?",
@@ -1406,7 +1544,7 @@ const en: Dict = {
   finalCta: {
     title: "Move freely.. pay your price",
     subtitle: "Join thousands of passengers and drivers across Algeria and experience a new generation of smart mobility.",
-    cta: "Download the app now",
+    cta: "Explore the platform",
     alt: "Contact us",
     ctaDriver: "Become a driver",
   },
@@ -1423,7 +1561,7 @@ const en: Dict = {
     trust4: "Secure payments",
   },
   footer: {
-    tagline: "Smart mobility for Algeria, powered by AI.",
+    tagline: "Smart mobility with an agent.",
     aboutTitle: "About INRIDE AI",
     aboutText:
       "INRIDE AI is an interactive digital platform connecting users and facilitating transport, mobility and delivery services. We act as technical intermediaries providing a free and safe negotiation environment between passengers and drivers, without intervening directly in individual transactions.",

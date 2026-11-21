@@ -31,10 +31,10 @@ export function SectionHeading({
 }) {
   const alignCls = align === "center" ? "text-center mx-auto" : "text-start";
   return (
-    <header className={`max-w-3xl mb-12 md:mb-16 ${alignCls} ${className}`}>
+    <header className={`mb-10 max-w-3xl md:mb-14 ${alignCls} ${className}`}>
       {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-      <h2 className="mb-4 text-3xl font-extrabold leading-tight text-ink md:text-5xl">{title}</h2>
-      {subtitle ? <p className="text-base text-ink-mute md:text-lg">{subtitle}</p> : null}
+      <h2 className="mb-3 text-[1.75rem] font-extrabold leading-tight text-ink sm:text-3xl md:mb-4 md:text-5xl">{title}</h2>
+      {subtitle ? <p className="text-base leading-7 text-ink-mute md:text-lg md:leading-8">{subtitle}</p> : null}
     </header>
   );
 }

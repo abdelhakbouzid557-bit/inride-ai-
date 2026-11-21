@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, Download } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, ArrowUpRight } from "lucide-react";
 import { useI18n, LANGS } from "@/lib/i18n";
 import { NAV_ANCHORS } from "@/lib/data";
+import { toLocalizedPath } from "@/lib/routes";
 import { Brand } from "./ui";
 import {
   Sheet,
@@ -13,9 +15,15 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Navbar() {
-  const { t, lang, setLang } = useI18n();
+  const { t, lang, dir, setLang } = useI18n();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const homePath = toLocalizedPath("/", lang) ?? "/";
+  const isHome = pathname === homePath;
+  const homeAnchor = (fragment: string) =>
+    isHome ? fragment : `${homePath}${fragment}`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -24,35 +32,39 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const side = "right";
+  const side = dir === "rtl" ? "right" : "left";
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b bg-white/80 backdrop-blur-xl transition-all duration-300 ${
-        scrolled ? "border-border shadow-md shadow-slate-900/5" : "border-transparent"
+      className={`sticky top-0 z-50 border-b bg-white/95 backdrop-blur-xl transition-all duration-300 ${
+        scrolled ? "border-border shadow-sm shadow-slate-900/5" : "border-transparent"
       }`}
     >
-      <div className="container-page flex h-[68px] items-center justify-between gap-4">
-        <a href="#top" aria-label="INRIDE AI" className="shrink-0">
+      <div className="container-page flex h-16 items-center justify-between gap-3 sm:h-[72px] sm:gap-4">
+        <a
+          href={homeAnchor("#top")}
+          aria-label="INRIDE AI"
+          className="shrink-0"
+        >
           <Brand />
         </a>
 
         <nav
-          className="hidden items-center gap-1 md:flex"
+          className="hidden items-center gap-0.5 xl:flex"
           aria-label={t("aria.nav")}
         >
           {NAV_ANCHORS.map((item) => (
             <a
               key={item.key}
-              href={item.href}
-              className="rounded-full px-3.5 py-2 text-sm font-semibold text-ink-soft transition hover:bg-primary-tint hover:text-primary md:py-2.5"
+              href={homeAnchor(item.href)}
+              className="rounded-full px-3 py-2 text-sm font-semibold text-ink-soft transition-colors hover:bg-primary-soft hover:text-primary-strong focus-visible:bg-primary-soft md:px-3.5 md:py-2.5"
             >
               {t(`nav.${item.key}`)}
             </a>
           ))}
           <a
             href="mailto:inrideai@gmail.com"
-            className="rounded-full px-3.5 py-2 text-sm font-semibold text-ink-soft transition hover:bg-primary-tint hover:text-primary md:py-2.5"
+            className="rounded-full px-3 py-2 text-sm font-semibold text-ink-soft transition-colors hover:bg-primary-soft hover:text-primary-strong focus-visible:bg-primary-soft md:px-3.5 md:py-2.5"
           >
             {t("nav.support")}
           </a>
@@ -64,33 +76,48 @@ export default function Navbar() {
             role="group"
             aria-label={t("aria.lang")}
           >
-            {LANGS.map((l) => (
-              <button
-                key={l.code}
-                type="button"
-                onClick={() => setLang(l.code)}
-                lang={l.code}
-                aria-pressed={lang === l.code}
-                className={`rounded-full px-2.5 py-1 text-[0.72rem] font-bold leading-none transition ${
-                  lang === l.code ? "bg-primary text-white shadow-sm" : "text-ink-mute hover:text-ink"
-                }`}
-              >
-                {l.label}
-              </button>
-            ))}
+            {LANGS.map((l) => {
+              const href = toLocalizedPath(pathname, l.code);
+              const className = `rounded-full px-2.5 py-1 text-[0.72rem] font-bold leading-none transition ${
+                lang === l.code ? "bg-primary-strong text-white shadow-sm" : "text-ink-mute hover:text-ink"
+              }`;
+
+              return href ? (
+                <a
+                  key={l.code}
+                  href={href}
+                  lang={l.code}
+                  aria-current={lang === l.code ? "page" : undefined}
+                  className={className}
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <button
+                  key={l.code}
+                  type="button"
+                  onClick={() => setLang(l.code)}
+                  lang={l.code}
+                  aria-pressed={lang === l.code}
+                  className={className}
+                >
+                  {l.label}
+                </button>
+              );
+            })}
           </div>
 
           <a
-            href="#download"
-            className="hidden items-center gap-1.5 rounded-full bg-primary px-4 py-2.5 text-sm font-bold text-white shadow-brand transition hover:-translate-y-0.5 hover:bg-primary-strong hover:shadow-glow md:inline-flex"
+            href={homeAnchor("#app")}
+            className="hidden items-center gap-1.5 rounded-full bg-primary-strong px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:brightness-95 xl:inline-flex"
           >
-            <Download className="h-4 w-4" aria-hidden="true" />
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             {t("nav.cta")}
           </a>
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-white text-ink md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-white text-ink xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={t("common.menu")}
@@ -101,7 +128,9 @@ export default function Navbar() {
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetContent
+              id="mobile-nav"
               side={side}
+              closeLabel={t("common.close")}
               className="w-[86%] max-w-xs gap-0 bg-white p-0"
             >
               <SheetTitle className="sr-only">{t("aria.nav")}</SheetTitle>
@@ -110,7 +139,11 @@ export default function Navbar() {
               </SheetDescription>
 
               <div className="flex items-center justify-between border-b border-border px-5 py-4">
-                <a href="#top" onClick={() => setOpen(false)} aria-label="INRIDE AI">
+                <a
+                  href={homeAnchor("#top")}
+                  onClick={() => setOpen(false)}
+                  aria-label="INRIDE AI"
+                >
                   <Brand />
                 </a>
               </div>
@@ -122,9 +155,9 @@ export default function Navbar() {
                 {NAV_ANCHORS.map((item) => (
                   <a
                     key={item.key}
-                    href={item.href}
+                    href={homeAnchor(item.href)}
                     onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-3 text-base font-bold text-ink transition hover:bg-primary-tint hover:text-primary"
+                    className="rounded-xl px-4 py-3 text-base font-bold text-ink transition hover:bg-primary-tint hover:text-primary-strong"
                   >
                     {t(`nav.${item.key}`)}
                   </a>
@@ -132,7 +165,7 @@ export default function Navbar() {
                 <a
                   href="mailto:inrideai@gmail.com"
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-3 text-base font-bold text-ink transition hover:bg-primary-tint hover:text-primary"
+                  className="rounded-xl px-4 py-3 text-base font-bold text-ink transition hover:bg-primary-tint hover:text-primary-strong"
                 >
                   {t("nav.support")}
                 </a>
@@ -140,11 +173,11 @@ export default function Navbar() {
 
               <div className="mt-auto border-t border-border p-4">
                 <a
-                  href="#download"
+                  href={homeAnchor("#app")}
                   onClick={() => setOpen(false)}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-brand transition hover:-translate-y-0.5 hover:bg-primary-strong"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-strong px-6 py-3.5 text-sm font-bold text-white shadow-sm transition hover:brightness-95"
                 >
-                  <Download className="h-4 w-4" aria-hidden="true" />
+                  <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                   {t("nav.cta")}
                 </a>
               </div>

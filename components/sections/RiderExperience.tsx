@@ -1,8 +1,8 @@
 "use client";
 
-import { Smartphone, PhoneCall, MapPin, Wallet, Handshake, Radar, Star, ArrowRight } from "lucide-react";
+import { ArrowDown, Handshake, MapPin, PhoneCall, Radar, Smartphone, Star, Wallet } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { SectionHeading, Reveal } from "@/components/ui";
+import { Reveal } from "@/components/ui";
 
 export default function RiderExperience() {
   const { t } = useI18n();
@@ -17,42 +17,46 @@ export default function RiderExperience() {
   ];
 
   return (
-    <section id="experience" className="py-20 md:py-28">
-      <div className="container-page">
-        <SectionHeading eyebrow={t("rider.kicker")} title={t("rider.title")} subtitle={t("rider.subtitle")} />
+    <section id="experience" className="relative overflow-hidden bg-white pb-16 pt-10 sm:pb-20 sm:pt-14 lg:pb-28 lg:pt-20">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[28rem] bg-gradient-to-b from-primary-soft/70 to-transparent" aria-hidden="true" />
+      <div className="container-page relative">
+        <Reveal>
+          <header className="mx-auto max-w-3xl text-center">
+            <span className="badge-primary">{t("rider.kicker")}</span>
+            <h1 className="mt-5 text-[2.15rem] font-extrabold leading-[1.25] text-ink sm:text-5xl lg:text-[4rem]">
+              {t("rider.title")}
+            </h1>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-ink-mute sm:text-lg">
+              {t("rider.subtitle")}
+            </p>
+          </header>
+        </Reveal>
 
-        <div className="mx-auto max-w-6xl overflow-x-auto pb-4">
-          <ol className="flex min-w-[700px] items-start gap-2">
-            {steps.map((s, i) => (
-              <Reveal key={s.title} delay={(i % 7) * 80}>
-                <li className="relative flex flex-1 flex-col items-center text-center">
-                  <div className="relative">
-                    <span className="relative z-10 grid h-14 w-14 place-items-center rounded-2xl border-2 border-[#4346EE]/20 bg-[#4346EE]/10 text-[#4346EE]">
-                      <s.icon className="h-6 w-6" aria-hidden="true" />
-                    </span>
-                    <span className="absolute -top-2 -right-2 z-20 grid h-6 w-6 place-items-center rounded-full bg-[#4346EE] text-[0.6rem] font-black text-white">
-                      {i + 1}
-                    </span>
-                  </div>
-                  {i < steps.length - 1 && (
-                    <div className="absolute left-[calc(50%+32px)] top-7 hidden h-0.5 w-[calc(100%-64px)] bg-gradient-to-r from-[#4346EE]/30 to-[#4346EE]/10 md:block" />
-                  )}
-                  <h3 className="mt-4 text-sm font-extrabold text-[#15171E]">{s.title}</h3>
-                  <p className="mt-1.5 max-w-[140px] text-[0.8rem] text-[#626775]">{s.desc}</p>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
+        <ol className="relative mx-auto mt-12 grid max-w-6xl gap-3 sm:mt-14 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+          {steps.map(({ icon: Icon, title, desc }, index) => (
+            <Reveal key={title} delay={(index % 3) * 80} className={index === 6 ? "sm:col-span-2 lg:col-span-1" : ""}>
+              <li className="group relative h-full overflow-hidden rounded-2xl border border-border bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md sm:p-6">
+                <div className="flex items-start justify-between gap-5">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary-soft text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <span className="text-sm font-bold tabular-nums text-primary/60">{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <h2 className="mt-7 text-lg font-extrabold text-ink">{title}</h2>
+                <p className="mt-2 text-sm leading-7 text-ink-mute">{desc}</p>
+              </li>
+            </Reveal>
+          ))}
+        </ol>
 
-        <Reveal delay={200}>
-          <div className="mt-8 flex justify-center">
+        <Reveal delay={180}>
+          <div className="mt-10 flex justify-center sm:mt-12">
             <a
               href="#download"
-              className="inline-flex items-center gap-2 rounded-full bg-[#4346EE] px-6 py-3 text-sm font-bold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-[#3639D6]"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full bg-primary-strong px-7 py-3 text-sm font-bold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
             >
               INRIDE AI
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              <ArrowDown className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
         </Reveal>

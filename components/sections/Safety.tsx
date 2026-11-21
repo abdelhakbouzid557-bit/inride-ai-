@@ -1,78 +1,28 @@
 "use client";
 
-import {
-  ShieldCheck,
-  MapPin,
-  Phone,
-  Clock,
-  HeartPulse,
-  UserCheck,
-  Lock,
-  Camera,
-  Headphones,
-  AlertTriangle,
-} from "lucide-react";
+import { BadgeCheck, FileCheck2, Handshake } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { SectionHeading, Reveal } from "@/components/ui";
+import { SectionHeading } from "@/components/ui";
 
 export default function Safety() {
   const { t } = useI18n();
-  const checks = [
-    { icon: ShieldCheck, text: t("safety.c1") },
-    { icon: MapPin, text: t("safety.c2") },
-    { icon: Phone, text: t("safety.c3") },
-    { icon: Clock, text: t("safety.c4") },
-    { icon: HeartPulse, text: t("safety.c5") },
-    { icon: UserCheck, text: t("safety.c6") },
-    { icon: Lock, text: t("safety.c7") },
-    { icon: Camera, text: t("safety.c8") },
-    { icon: Headphones, text: t("safety.c9") },
+  const points = [
+    { icon: Handshake, text: t("landing.safetyPoint1") },
+    { icon: BadgeCheck, text: t("landing.safetyPoint2") },
+    { icon: FileCheck2, text: t("landing.safetyPoint3") },
   ];
-
   return (
-    <section id="safety" className="relative overflow-hidden bg-[#4346EE] py-20 md:py-28">
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute right-[5%] top-[10%] h-[300px] w-[300px] rounded-full bg-white/10 blur-[100px]" />
-        <div className="absolute bottom-[5%] left-[8%] h-[200px] w-[200px] rounded-full bg-white/8 blur-[80px]" />
-      </div>
-
-      <div className="container-page relative">
-        <div className="mb-4 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-xs font-bold text-white">
-            <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
-            {t("safety.kicker")}
-          </span>
-        </div>
-        <SectionHeading
-          title={t("safety.title")}
-          subtitle={t("safety.subtitle")}
-          className="[&_h2]:text-white [&_p]:text-white/70 [&_span]:border-white/10 [&_span]:text-white"
-        />
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {checks.map((c, i) => (
-            <Reveal key={c.text} delay={(i % 3) * 90}>
-              <div className="flex h-full items-start gap-3.5 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur transition hover:border-white/30 hover:bg-white/15">
-                <span className="mt-0.5 grid h-8 w-8 flex-none place-items-center rounded-lg bg-white/15 text-white">
-                  <c.icon className="h-4 w-4" aria-hidden="true" />
-                </span>
-                <p className="font-semibold text-white/80">{c.text}</p>
-              </div>
-            </Reveal>
+    <section id="safety" className="border-y border-border bg-bg-soft py-20 md:py-24">
+      <div className="container-page grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <SectionHeading eyebrow={t("landing.safetyEyebrow")} title={t("landing.safetyTitle")} subtitle={t("landing.safetyBody")} align="start" className="mb-0" />
+        <ul className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+          {points.map(({ icon: Icon, text }) => (
+            <li key={text} className="flex items-center gap-4 rounded-xl border border-border bg-white p-4 transition-colors hover:border-primary/35 sm:p-5">
+              <span className="grid h-10 w-10 flex-none place-items-center rounded-lg bg-primary-soft text-primary"><Icon className="h-5 w-5" aria-hidden="true" /></span>
+              <span className="text-sm font-semibold leading-6 text-ink">{text}</span>
+            </li>
           ))}
-        </div>
-
-        <Reveal delay={150}>
-          <div className="mt-10 text-center">
-            <a
-              href="#download"
-              className="inline-flex items-center gap-2 rounded-full bg-[#15171E] px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1a1f36]"
-            >
-              <AlertTriangle className="h-4 w-4" aria-hidden="true" />
-              {t("safety.cta")}
-            </a>
-          </div>
-        </Reveal>
+        </ul>
       </div>
     </section>
   );

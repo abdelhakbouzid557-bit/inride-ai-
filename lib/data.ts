@@ -3,16 +3,14 @@ export const SITE = {
   url: "https://inride.ai.dz/",
   email: "inrideai@gmail.com",
   supportEmail: "inrideai@gmail.com",
-  ogImage: "https://inride.ai.dz/LOGO.png",
+  ogImage: "https://inride.ai.dz/LOGO5.png",
 } as const;
 
 export const NAV_ANCHORS = [
-  { key: "home", href: "#top" },
   { key: "services", href: "#services" },
-  { key: "ai", href: "#ai" },
-  { key: "safety", href: "#safety" },
+  { key: "pricing", href: "#how-it-works" },
   { key: "drivers", href: "#drivers" },
-  { key: "business", href: "#business" },
-  { key: "news", href: "#news" },
+  { key: "safety", href: "#safety" },
+  { key: "faq", href: "#faq" },
   { key: "about", href: "#about" },
 ] as const;

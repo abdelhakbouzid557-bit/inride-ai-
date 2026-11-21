@@ -13,20 +13,6 @@ import { DICTS, LANGS, type Dict, type Lang } from "./translations";
 
 const LS_KEY = "inride_lang";
 
-function readStoredLang(): Lang {
-  if (typeof window === "undefined") return "ar";
-  try {
-    const url = new URL(window.location.href);
-    const q = url.searchParams.get("lang");
-    if (q && q in DICTS) return q as Lang;
-    const stored = window.localStorage.getItem(LS_KEY);
-    if (stored && stored in DICTS) return stored as Lang;
-  } catch {
-    /* ignore */
-  }
-  return "ar";
-}
-
 interface I18nCtx {
   lang: Lang;
   dir: "ltr" | "rtl";
@@ -37,12 +23,18 @@ interface I18nCtx {
 
 const Ctx = createContext<I18nCtx | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("ar");
+export function LanguageProvider({
+  children,
+  initialLang = "ar",
+}: {
+  children: ReactNode;
+  initialLang?: Lang;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   useEffect(() => {
-    setLangState(readStoredLang());
-  }, []);
+    setLangState(initialLang);
+  }, [initialLang]);
 
   useEffect(() => {
     const meta = DICTS[lang].meta;

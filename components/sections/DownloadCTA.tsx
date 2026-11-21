@@ -79,22 +79,22 @@ function PhoneScene() {
         <rect x="165" y="83" width="14" height="12" rx="1.5" fill="#CBD5E1" />
         <rect x="169" y="42" width="6" height="6" rx="1" fill="#D1D5DB" />
         <g transform="translate(115, 82)">
-          <rect x="-18" y="-4" width="36" height="14" rx="4" fill="#4346EE" />
-          <rect x="-14" y="-7" width="28" height="6" rx="3" fill="#3639D6" />
+          <rect x="-18" y="-4" width="36" height="14" rx="4" fill="#1687f8" />
+          <rect x="-14" y="-7" width="28" height="6" rx="3" fill="#0f73d4" />
           <rect x="-20" y="8" width="5" height="4" rx="2" fill="#15171E" opacity={0.6} />
           <rect x="15" y="8" width="5" height="4" rx="2" fill="#15171E" opacity={0.6} />
           <circle cx="-10" cy="10" r="2" fill="#374151" />
           <circle cx="10" cy="10" r="2" fill="#374151" />
-          <rect x="16" y="1" width="6" height="4" rx="1" fill="#4346EE" opacity={0.8} />
-          <rect x="-22" y="1" width="6" height="4" rx="1" fill="#4346EE" opacity={0.8} />
+          <rect x="16" y="1" width="6" height="4" rx="1" fill="#1687f8" opacity={0.8} />
+          <rect x="-22" y="1" width="6" height="4" rx="1" fill="#1687f8" opacity={0.8} />
         </g>
         <g transform="translate(62, 56)">
-          <circle cx="0" cy="0" r="8" fill="#4346EE" opacity={0.12} />
-          <circle cx="0" cy="0" r="4" fill="#4346EE" opacity={0.25} />
-          <circle cx="0" cy="0" r="2" fill="#4346EE" />
-          <line x1="0" y1="8" x2="0" y2="18" stroke="#4346EE" strokeWidth="1.5" opacity={0.4} />
+          <circle cx="0" cy="0" r="8" fill="#1687f8" opacity={0.12} />
+          <circle cx="0" cy="0" r="4" fill="#1687f8" opacity={0.25} />
+          <circle cx="0" cy="0" r="2" fill="#1687f8" />
+          <line x1="0" y1="8" x2="0" y2="18" stroke="#1687f8" strokeWidth="1.5" opacity={0.4} />
         </g>
-        <path d="M 0 106 Q 55 93 110 98 Q 165 103 220 106" fill="none" stroke="#4346EE" strokeWidth="1.5" opacity={0.2} strokeDasharray="4 3" />
+        <path d="M 0 106 Q 55 93 110 98 Q 165 103 220 106" fill="none" stroke="#1687f8" strokeWidth="1.5" opacity={0.2} strokeDasharray="4 3" />
       </svg>
     </div>
   );
@@ -104,16 +104,16 @@ function GeometricBg() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       <svg className="absolute -start-20 top-1/4 h-80 w-80 opacity-[0.06]" viewBox="0 0 320 320">
-        <circle cx="160" cy="160" r="150" fill="none" stroke="#4346EE" strokeWidth="1" />
-        <circle cx="160" cy="160" r="100" fill="none" stroke="#4346EE" strokeWidth="0.5" strokeDasharray="4 6" />
-        <circle cx="160" cy="160" r="50" fill="none" stroke="#4346EE" strokeWidth="0.5" />
+        <circle cx="160" cy="160" r="150" fill="none" stroke="#1687f8" strokeWidth="1" />
+        <circle cx="160" cy="160" r="100" fill="none" stroke="#1687f8" strokeWidth="0.5" strokeDasharray="4 6" />
+        <circle cx="160" cy="160" r="50" fill="none" stroke="#1687f8" strokeWidth="0.5" />
       </svg>
       <svg className="absolute -end-16 top-1/3 h-64 w-64 opacity-[0.05]" viewBox="0 0 260 260">
-        <rect x="30" y="30" width="200" height="200" rx="20" fill="none" stroke="#4346EE" strokeWidth="0.8" transform="rotate(15 130 130)" />
-        <rect x="60" y="60" width="140" height="140" rx="14" fill="none" stroke="#4346EE" strokeWidth="0.5" strokeDasharray="3 5" transform="rotate(30 130 130)" />
+        <rect x="30" y="30" width="200" height="200" rx="20" fill="none" stroke="#1687f8" strokeWidth="0.8" transform="rotate(15 130 130)" />
+        <rect x="60" y="60" width="140" height="140" rx="14" fill="none" stroke="#1687f8" strokeWidth="0.5" strokeDasharray="3 5" transform="rotate(30 130 130)" />
       </svg>
       <svg className="absolute start-1/2 -translate-x-1/2 top-0 h-40 w-full opacity-[0.04]" viewBox="0 0 800 160">
-        <path d="M 0 80 Q 200 20 400 80 Q 600 140 800 80" fill="none" stroke="#4346EE" strokeWidth="1.5" strokeDasharray="6 8" />
+        <path d="M 0 80 Q 200 20 400 80 Q 600 140 800 80" fill="none" stroke="#1687f8" strokeWidth="1.5" strokeDasharray="6 8" />
       </svg>
     </div>
   );
@@ -129,48 +129,48 @@ export default function DownloadCTA() {
   ];
 
   return (
-    <section id="download" className="relative overflow-hidden bg-[#F8F9FC] py-20 md:py-28">
+    <section id="download" className="relative overflow-hidden bg-bg-soft py-16 sm:py-20 md:py-28">
       <GeometricBg />
 
       <div className="container-page relative z-10">
         <Reveal>
-          <header className="mx-auto mb-16 max-w-2xl text-center">
+          <header className="mx-auto mb-12 max-w-2xl text-center sm:mb-16">
             <span className="eyebrow">{t("download.kicker")}</span>
-            <h2 className="mb-4 text-3xl font-extrabold leading-tight text-[#15171E] md:text-5xl">
+            <h2 className="mb-4 text-[1.75rem] font-extrabold leading-tight text-ink sm:text-3xl md:text-5xl">
               {t("download.title")}
             </h2>
-            <p className="text-base text-[#626775] md:text-lg">{t("download.subtitle")}</p>
+            <p className="text-base leading-7 text-ink-mute md:text-lg md:leading-8">{t("download.subtitle")}</p>
           </header>
         </Reveal>
 
         <Reveal delay={100}>
           <div className="flex flex-col items-center">
             <div className="relative mb-8">
-              <div className="absolute -inset-12 rounded-full bg-[#4346EE]/[0.06] blur-3xl" aria-hidden="true" />
+              <div className="absolute -inset-12 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
 
               <div className="relative w-[260px] sm:w-[280px] md:w-[300px]">
-                <div className="overflow-hidden rounded-[36px] border-[5px] border-[#E8EAF0] bg-white shadow-[0_30px_70px_-20px_rgba(17,24,39,0.12),0_8px_24px_-8px_rgba(67,70,238,0.08)] sm:rounded-[40px] sm:border-[6px]">
+                <div className="overflow-hidden rounded-[36px] border-[5px] border-border bg-white shadow-[0_30px_70px_-20px_rgba(17,24,39,0.12),0_8px_24px_-8px_rgba(22,135,248,0.12)] sm:rounded-[40px] sm:border-[6px]">
                   <div className="absolute left-1/2 top-2.5 z-30 h-3.5 w-20 -translate-x-1/2 rounded-full bg-[#E8EAF0] sm:top-3 sm:h-4 sm:w-24" aria-hidden="true" />
 
-                  <div className="flex min-h-[420px] flex-col items-center justify-center bg-gradient-to-b from-white via-[#F8F9FC] to-[#F1F1FE] pt-8 sm:min-h-[480px]">
+                  <div className="flex min-h-[420px] flex-col items-center justify-center bg-gradient-to-b from-white via-bg-soft to-primary-soft pt-8 sm:min-h-[480px]">
                     <img src="/LOGO5.png" alt="INRIDE AI" className="h-16 w-16 object-contain sm:h-20 sm:w-20" width={80} height={80} />
-                    <span className="mt-4 text-2xl font-black tracking-tight text-[#4346EE] sm:text-3xl">INRIDE</span>
+                    <span className="mt-4 text-2xl font-black tracking-tight text-primary sm:text-3xl">INRIDE</span>
                     <span className="text-sm font-bold text-[#15171E] sm:text-base">AI</span>
 
                     <div className="mt-5 flex items-center gap-1.5">
-                      <span className="h-2 w-2 animate-bounce rounded-full bg-[#4346EE]" style={{ animationDelay: "0ms" }} />
-                      <span className="h-2 w-2 animate-bounce rounded-full bg-[#4346EE]" style={{ animationDelay: "150ms" }} />
-                      <span className="h-2 w-2 animate-bounce rounded-full bg-[#4346EE]" style={{ animationDelay: "300ms" }} />
+                      <span className="h-2 w-2 animate-bounce rounded-full bg-primary" style={{ animationDelay: "0ms" }} />
+                      <span className="h-2 w-2 animate-bounce rounded-full bg-primary" style={{ animationDelay: "150ms" }} />
+                      <span className="h-2 w-2 animate-bounce rounded-full bg-primary" style={{ animationDelay: "300ms" }} />
                     </div>
 
                     <PhoneScene />
                   </div>
                 </div>
 
-                <div className="absolute -bottom-5 left-1/2 z-30 w-[calc(100%-32px)] -translate-x-1/2 rounded-2xl border border-[#E8EAF0] bg-white px-4 py-3 shadow-lg sm:-bottom-6 sm:px-5 sm:py-3.5">
+                <div className="absolute -bottom-5 left-1/2 z-30 w-[calc(100%-32px)] -translate-x-1/2 rounded-2xl border border-border bg-white px-4 py-3 shadow-lg sm:-bottom-6 sm:px-5 sm:py-3.5">
                   <div className="flex items-center gap-3">
-                    <div className="grid h-9 w-9 flex-none place-items-center rounded-xl bg-[#4346EE]/10">
-                      <Shield className="h-[18px] w-[18px] text-[#4346EE]" aria-hidden="true" />
+                    <div className="grid h-9 w-9 flex-none place-items-center rounded-xl bg-primary-soft">
+                      <Shield className="h-[18px] w-[18px] text-primary" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="text-[0.7rem] font-bold text-[#15171E] sm:text-xs">{t("download.safetyTitle")}</p>
@@ -188,9 +188,9 @@ export default function DownloadCTA() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-3 rounded-2xl border border-[#E8EAF0] bg-white px-4 py-3.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#4346EE]/40 hover:shadow-md sm:flex-col sm:items-center sm:gap-2 sm:px-5 sm:py-5"
+                  className="group flex items-center gap-3 rounded-2xl border border-border bg-white px-4 py-3.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md sm:flex-col sm:items-center sm:gap-2 sm:px-5 sm:py-5"
                 >
-                  <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-[#4346EE]/10 text-[#4346EE] transition group-hover:bg-[#4346EE]/15">
+                  <span className="grid h-10 w-10 flex-none place-items-center rounded-xl bg-primary-soft text-primary transition group-hover:bg-primary group-hover:text-white">
                     <StoreIcon type={s.type} />
                   </span>
                   <span className="flex flex-col items-start leading-tight sm:items-center">
@@ -207,13 +207,13 @@ export default function DownloadCTA() {
                 aria-label={t("download.qrAria")}
                 className="group relative grid h-32 w-32 place-items-center rounded-2xl border border-[#E8EAF0] bg-white p-3 shadow-sm transition hover:shadow-md sm:h-36 sm:w-36"
               >
-                <span className="absolute inset-0 rounded-2xl bg-[#4346EE]/5 opacity-0 transition group-hover:opacity-100" />
+                <span className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 transition group-hover:opacity-100" />
                 <span className="relative h-full w-full text-[#15171E]">
                   <FakeQr />
                 </span>
               </div>
               <span className="flex items-center gap-1.5 text-sm font-bold text-[#374151]">
-                <QrCode className="h-4 w-4 text-[#4346EE]" aria-hidden="true" />
+                <QrCode className="h-4 w-4 text-primary" aria-hidden="true" />
                 {t("download.qrTitle")}
               </span>
               <span className="text-xs text-[#9CA3AF]">{t("download.qrSub")}</span>
